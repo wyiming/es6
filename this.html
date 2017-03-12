@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script>
+
+    var name = 'global';
+
+      function foo(){
+        this.name = 'local';
+
+        return function(){
+           console.log(this.name)
+        }
+      }
+
+      var f = new foo()
+      f();
+
+    </script>
+  </body>
+</html>

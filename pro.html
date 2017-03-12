@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+<script>
+
+// var promise = new Promise(function(resolve,reject){
+// });
+// var xhr = new XMLHttpRequest();
+// xhr.onreadystatechange = function(){
+//     if(xhr.readyState == 4 && xhr.status == 200){
+//         console.log(xhr.responseText)
+//     }
+// }
+//
+// xhr.open('get','data.json',true);
+// xhr.send();
+
+// $http.get().success()
+//$http.get().then()
+var fetch = function(url){
+    var promise = new Promise(function(resolve,reject){
+
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function(){
+          if(xhr.readyState == 4 && xhr.status == 200){
+              // console.log(xhr.responseText)
+              resolve(xhr.responseText)
+          }
+      }
+
+      xhr.open('get','data.json',true);
+      xhr.send();
+
+    })
+
+    return promise;
+}
+
+
+  // fetch('data.json')
+  // .then(function(data){
+  //     // console.log(data)
+  //     return JSON.parse(data)
+  // })
+  // .then(function(json){
+  //   console.log(json)
+  // })
+
+
+  //回调地狱
+  fetch('data.json')
+  .then(function(data){
+
+  })
+  .then(function(json){
+
+  }).
+  then(function(){
+
+  })
+
+
+
+
+</script>
+  </body>
+</html>

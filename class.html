@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+<script>
+
+    //java class
+    // 面相过程
+
+    function P(name,age){
+      this.name = name;
+      this.age = age;
+    }
+
+    class Person{
+
+        constructor(name,age){
+            this.name = name;
+            this.age = age;
+        }
+        say(){
+          console.log(this.name + ',' + this.age)
+        }
+    }
+
+    var p1 = new Person('小明',12)
+    p1.say();
+
+    
+
+
+</script>
+  </body>
+</html>
